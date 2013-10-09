@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>jQuery Boilerplate</title>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+		<script src="../src/jquery.boilerplate.js"></script>
+		<script src="../src/easymodal.css"></script>
+		<link rel="stylesheet" type="text/css" href="../src/easymodal.css" media="screen" />
+
+
+		<style media="screen" type="text/css">
+
+			/*.imagessrc {
+				width: 50px;
+			}
+			.imagessrc.hover {
+				width: 200px;
+			}
+
+			.modal-active {
+				margin-left: 92px;
+			}
+			#modal .contents {
+				font-family: futura;
+				padding: 24px;
+			}
+
+			#blind {
+			   position:absolute;
+			   z-index:9999;
+			   top:0;
+			   left:0;
+			   width:100%;
+			   height:100%;
+			   background-color:#000000;
+			}
+
+			#modal .window {
+				opacity: 0;
+				position: absolute;
+				z-index: 10000;
+				width: 400px;
+				height: 235px;
+				top: 200px;
+				left: 390px; 
+				background-color:#ffffff;
+			    box-shadow:4px 4px 80px #000;
+				-webkit-box-shadow:4px 4px 80px #000;
+				-moz-box-shadow:4px 4px 80px #000;
+			}
+
+			.modalLink {
+				font-family: futura;
+				color: black;
+				font-size: 16px;
+				margin-left: 93px;
+			}*/
+
+		</style>
+
+	</head>
+	<body>
+
+		<!-- Modal information here -->
+		<div><a href="#dialog" class="modalLink">Click Here!</a>
+
+			<div id="modal">
+				 <div id="dialog" class="window">
+				    <div class="contents">
+				        <h3>This is your Easy Modal</h3>
+				        <p>Enter your text for modal.</p> 
+				        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiustempor incididunt ut labore et dolore magna aliqua.</p> 
+				        <p>Tyler Phillips</p>
+				        <a href="#" class="close">Close</a>
+				    </div>
+				  </div>
+				</div>
+
+		</div>
+		<div id="element">Easy Modal Plugin
+			<p>Insert modals into you website with ease!</p>
+		</div>
+		<a href="#" id="name">
+		    <img title="Iron Yard Logo" class="imagessrc" src="../images/view.png" onmouseover="this.src='../images/view.hover.png'" onmouseout="this.src='../images/view.png'" />
+		</a>
+		
+		<script>
+			
+			// Calls modal
+			$('a.modalLink').click(function(easymodal){
+        
+		        easymodal.preventDefault();
+
+		        var id = $(this).attr('href');
+
+		        activeWindow = $('.window' + id)
+		            .css('opacity', '0') 
+		            .css('top', '40%') 
+		            .css('left', '32%') 
+		            .fadeTo(500, 1);
+
+		        $('#modal')
+		            .append('<div id="blind" />')
+		            .find('#blind') 
+		            .css('opacity', '0') 
+		            .fadeTo(500, 0.6) 
+		            .click(function(e){
+		                closeModal(); 
+		            });
+
+		    });
+
+
+			// Closes Modal
+		    $('a.close').click(function(easymodal){
+	            easymodal.preventDefault();
+
+	            closeModal();
+
+			    });		
+
+		    function closeModal() {
+
+		        activeWindow.fadeOut(250, 
+		        	function(){ $(this).css('top', '0px').css('left', '0px'); });
+
+		        $('#blind').fadeOut(250,	
+		        	function(){	$(this).remove(); });
+
+		    };
+
+		</script>
+	</body>
+</html>

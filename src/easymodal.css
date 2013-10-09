@@ -1,0 +1,49 @@
+#element {
+	font-family: futura;
+	padding: 24px;
+}
+.imagessrc {
+	width: 50px;
+}
+.imagessrc.hover {
+	width: 200px;
+}
+
+.modal-active {
+	margin-left: 92px;
+}
+#modal .contents {
+	font-family: futura;
+	padding: 24px;
+}
+
+#blind {
+   position:absolute;
+   z-index:9999;
+   top:0;
+   left:0;
+   width:100%;
+   height:100%;
+   background-color:#000000;
+}
+
+#modal .window {
+	opacity: 0;
+	position: absolute;
+	z-index: 10000;
+	width: 400px;
+	min-height: 100px;
+	top: 200px;
+	left: 390px; 
+	background-color:#ffffff;
+    box-shadow:4px 4px 80px #000;
+	-webkit-box-shadow:4px 4px 80px #000;
+	-moz-box-shadow:4px 4px 80px #000;
+}
+
+.modalLink {
+	font-family: futura;
+	color: black;
+	font-size: 45px;
+	margin-left: 93px;
+}
