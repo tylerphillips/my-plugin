@@ -1,13 +1,18 @@
+body {
+	text-align: left;
+	font-family: futura;
+}
+
 #element {
 	font-family: futura;
 	padding: 24px;
 }
-.imagessrc {
+/*.imagessrc {
 	width: 50px;
 }
 .imagessrc.hover {
 	width: 200px;
-}
+}*/
 
 .modal-active {
 	margin-left: 92px;
@@ -45,5 +50,42 @@
 	font-family: futura;
 	color: black;
 	font-size: 45px;
-	margin-left: 93px;
+	margin-left: 24px;
+}
+
+/*<!-- CSS for Image Swap -->*/
+
+
+span.imgswap {
+	/*background-image:url("http://www.culturalinquiry.org/blog/wp-content/uploads/2011/11/ICIb-FFmercuryObit-sq.jpg"); */
+	background-image:url("http://images4.wikia.nocookie.net/__cb20070726080109/uncyclopedia/images/2/2a/Lolcats-mah-brutha.jpg"); 
+  	background-repeat: no-repeat; display:block;
+  	width:200px;
+  	margin-left: 75px;
+}
+span.imgswap:hover img {
+	visibility:hidden;
+	width: 200px;
+
+} 
+span.imgswap2 {
+	background-image:url("http://static1.purepeople.com/articles/1/56/69/1/@/416795-bret-michaels-a-remporte-en-mai-2010-200x200-2.jpg"); 
+	/*background-image:url("http://www.culturalinquiry.org/blog/wp-content/uploads/2011/11/ICIb-FFmercuryObit-sq.jpg"); */
+  	background-repeat: no-repeat; display:block;
+  	width:200px;
+  	margin-left: 24px;
+  	border: solid 4px black;
+}
+span.imgswap2:hover img {
+	visibility:hidden;
+	width: 200px;
+
+} 
+
+.imageprehover {
+	width: 200px;
+}
+
+.imageswapdes {
+	margin-left: 24px;
 }

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>jQuery Boilerplate</title>
+		<title>EasyModal and ImageSwap</title>
 		<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
 		<script src="../src/jquery.boilerplate.js"></script>
 		<script src="../src/easymodal.css"></script>
@@ -9,7 +9,7 @@
 
 
 		<style media="screen" type="text/css">
-
+			/*Created separate CSS file called easymodal.css*/
 			/*.imagessrc {
 				width: 50px;
 			}
@@ -68,10 +68,25 @@
 				 <div id="dialog" class="window">
 				    <div class="contents">
 				        <h3>This is your Easy Modal</h3>
+
 				        <p>Enter your text for modal.</p> 
-				        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiustempor incididunt ut labore et dolore magna aliqua.</p> 
+						
+						<p>This plugin also contains code for easy image swap</p>
+						<!-- The Following Code is for the Image Swap -->
+				        <span class="imgswap">
+							<img src="../images/view.png" class="imageprehover" alt=""/>
+						</span>
+
+						
+						<!-- End Image Swap Code -->
+				        
 				        <p>Tyler Phillips</p>
+
+
+				        
+				        
 				        <a href="#" class="close">Close</a>
+
 				    </div>
 				  </div>
 				</div>
@@ -79,10 +94,24 @@
 		</div>
 		<div id="element">Easy Modal Plugin
 			<p>Insert modals into you website with ease!</p>
+
+			
 		</div>
-		<a href="#" id="name">
+
+		<span>
+			<p class="imageswapdes">Also, includes code for swapping image when hovered</p>
+		</span>
+
+		<span class="imgswap2">
+			<img src="../images/view2.png" class="imageprehover" alt=""/>
+		</span>
+
+		<!-- Iron Yard Logo -->
+		<!-- <a href="#" id="name">
 		    <img title="Iron Yard Logo" class="imagessrc" src="../images/view.png" onmouseover="this.src='../images/view.hover.png'" onmouseout="this.src='../images/view.png'" />
-		</a>
+		</a> -->
+
+		
 		
 		<script>
 			
@@ -95,8 +124,9 @@
 
 		        activeWindow = $('.window' + id)
 		            .css('opacity', '0') 
-		            .css('top', '40%') 
+		            .css('top', '5%') 
 		            .css('left', '32%') 
+		            .css('text-align', 'center') 
 		            .fadeTo(500, 1);
 
 		        $('#modal')
@@ -128,6 +158,8 @@
 		        	function(){	$(this).remove(); });
 
 		    };
+
+
 
 		</script>
 	</body>
